@@ -14,7 +14,7 @@ auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
 
-for tweet in tweepy.Cursor(api.search, q = ('#DituGoogle OR #DITUniversity OR #MadeInDIT')).items():
+for tweet in tweepy.Cursor(api.search, q = ('#DituGoogle OR #DITUniversity OR #DIT_University OR #MadeInDIT OR #gscditu OR #gscdit OR #GSCDITU OR #GSCDIT')).items():
     try:
         print('\nTweet by: @' + tweet.user.screen_name)
 
@@ -24,7 +24,7 @@ for tweet in tweepy.Cursor(api.search, q = ('#DituGoogle OR #DITUniversity OR #M
 
         #like the tweets
         tweet.favorite()
-        print('Like the tweet')
+        print('Liked the tweet : @' + tweet.user.screen_name)
 
         # Follow the user who tweeted !!
         tweet.user.follow()
