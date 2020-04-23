@@ -30,8 +30,8 @@ for tweet in tweepy.Cursor(api.search, q = ('#DituGoogle OR #DITUniversity OR #M
         tweet.user.follow()
         print('Followed : @' + tweet.user.screen_name)
 
-        # Add sleep method to space tweets by 1800 seconds each !!
-        sleep(1800)
+        # Add sleep method to space tweets by 600 seconds each !!
+        sleep(600)
 
     except tweepy.TweepError as e:
         print(e.reason)
